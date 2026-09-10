@@ -1,0 +1,36 @@
+# Agent OS Standards Index
+
+build:
+  checkIfBuilt-qtemp-recovery:
+    description: Verifying build success by checking QSYS.LIB object existence and recovering QTEMP mis-resolutions
+  custom-recipe-override:
+    description: Overriding the auto-generated build recipe for a single target via ${TARGET}_CUSTOM_RECIPE
+  launch-liblist-setup:
+    description: Why preUsrlibl is added to the library list in reverse order and CHGJOB LOG(4 00 *SECLVL) is set before compiling
+  make-special-char-unescaping:
+    description: How footer.mk reverses Python's HASHESCAPE_/DOLLARESCAPE_ markers back to literal #/$ in Make
+  non-recursive-directory-stack:
+    description: How the whole tree builds in one make invocation using a d/dir_stack directory-context push/pop
+  out-of-tree-builds:
+    description: Redirecting compiled objects outside the project tree via TOP_BUILD_DIR and its effect on dist_clean
+  pseudo-source-dsl:
+    description: Line syntax (+ continuation, ! suppress-error, /* comments, &O/&N placeholders) parsed by extractAndLaunch
+  shell-special-char-unescaping:
+    description: The shell-script leg of the #/$ escaping chain, reversing escapes before using names in bash commands
+  source-extension-mapping:
+    description: Source-extension-to-object-type mapping tables in const.py and how to keep them in sync
+  special-char-escaping:
+    description: Escaping # and $ in library/target names before passing them to Make
+
+testing:
+  conftest-mock-ordering:
+    description: Why conftest.py installs the ibm_db_dbi mock into sys.modules before test collection, and where new tests must live
+  local-vs-remote-split:
+    description: Why nox only runs tests/unit/local and what makes tests/unit/remote uncollectable outside a real IBM i/Unix env
+
+python:
+  broad-except-handling:
+    description: Convention for catching broad exceptions and reporting [FAILED] messages
+  doctest-examples:
+    description: Runnable doctest examples in docstrings for pure/parsing functions
+

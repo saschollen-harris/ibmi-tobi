@@ -1,0 +1,14 @@
+{
+  "audit_date": "2026-09-09",
+  "trigger": "from-prompt",
+  "dimensions_run": ["in-code", "readme-onboarding", "architecture-design", "user-developer-guides"],
+  "dimensions_skipped": [
+    {
+      "dimension": "api-reference",
+      "reason": "no API surface detected — no OpenAPI/Swagger/GraphQL/proto files found; no web-framework route definitions in src/"
+    }
+  ],
+  "files_scanned": 70,
+  "primary_languages": ["Python", "GNU Make", "Shell", "Markdown"],
+  "documentation_health_score": 56
+}

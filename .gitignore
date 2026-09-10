@@ -59,6 +59,7 @@ __pycache__/
 # Distribution / packaging
 .Python
 build/
+!agent-os/standards/build/
 develop-eggs/
 dist/
 downloads/
